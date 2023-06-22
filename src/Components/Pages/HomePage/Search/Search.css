@@ -1,0 +1,51 @@
+.search-section{
+    margin-top: 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: column;
+}
+.search-input{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.search-bus{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+}
+.search-bus div{
+    margin-left: 2rem;
+}
+
+.bus-info{
+    width: 80vw;
+    max-width: 600px;
+    margin-top: 3rem;
+    border: 1px solid black;
+    padding: 2rem;
+    display: flex;
+    text-align: justify;
+    justify-content: space-around;
+    align-items: center;
+    background-color: yellow;
+}
+.places{
+    font-weight: 700;
+}
+.places div{
+    margin: 10px;
+}
+.price{
+    background-color: orangered;
+    padding: 5px;
+    border: 1px solid black;
+}
+form .input>input{
+    margin: 10px;
+    height: 40px;
+    border-radius: 10px;
+    border-color: rgba(128, 128, 128, 0.434);
+}

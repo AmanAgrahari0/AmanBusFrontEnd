@@ -1,0 +1,64 @@
+.bus-info{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-around;
+}
+.search-buses{
+    /* display: flex;
+    align-items: center; */
+    justify-content: space-around;
+}
+.form{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 3rem;
+}
+.form input{
+    margin-left: 2rem;
+    background-color: yellow;
+}
+.form  button{
+    margin-left: 2rem;
+}
+
+.card{
+    width: 400px;
+    height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    border: 1px solid rgb(131, 131, 131);
+    margin-top: 2rem;
+    border-radius: 20px;
+}
+.card-left{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+.card-right{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.card-left>div{
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.card-right>div{
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.passenger-form{
+    position: absolute;
+    top: 30%;
+    border-left-width: 40%;
+    width: 80vw;
+    height: 50vh;
+    background-color: rgba(40, 40, 40, 0.9);
+    color: white;
+}

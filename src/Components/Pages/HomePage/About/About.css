@@ -1,0 +1,27 @@
+.about-section{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-around;
+    margin: 3rem;
+}       
+.about{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    text-align: left;
+    flex-wrap: wrap;
+}
+.about-elem{
+    border: 1px solid grey;
+    margin: 10px;
+    min-width: 300px;
+    max-width: 400px;
+    padding: 10px;
+}
+.about-elem{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-around;
+}

@@ -1,0 +1,35 @@
+.about-section{
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    justify-content: space-around;
+}
+
+
+
+.about-features{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    min-width: 700px;
+    max-width: 900px;
+    flex-wrap: wrap
+}
+
+.abouts{
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.about{
+    padding: 10px;
+    text-align: justify;
+    color: gray;
+    border: 1px solid rgb(159, 159, 159);
+    margin: 1rem;
+    width: 200px;
+    height: 250px;
+}

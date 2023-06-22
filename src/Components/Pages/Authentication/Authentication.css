@@ -1,0 +1,39 @@
+.signup-section{
+    margin-top: 3rem;
+    padding: 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.signup{
+    display: flex;
+    /* align-items: center; */
+}
+
+.form{
+    border: 1px solid black;
+    padding: 3rem;
+}
+
+.image{
+    background: url('./pic.png');
+    background-size: cover;
+    background-position: center;
+    width: 300px;
+    height: 300px;padding: 3rem;
+}
+
+form{
+    width: 100%;
+
+}
+form div>input{
+    height: 30px;
+    margin-top: 1rem;
+    border: 1px solid black;
+    width: 300px;
+}
+.login a{
+    color: black;
+    text-decoration: none;
+}

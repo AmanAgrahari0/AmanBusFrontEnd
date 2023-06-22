@@ -1,0 +1,33 @@
+.profile-section{
+    margin-top: 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.profile-main{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: start;
+    text-align: left;
+    border: 3px solid black;
+    padding: 3rem;
+}
+
+.profile-main div{
+    margin-top: 1rem;
+}
+.check-passes{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.check-passes div{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.check-passes div > a{
+    text-decoration: none;
+    color: red;
+}

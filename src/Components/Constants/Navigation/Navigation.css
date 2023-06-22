@@ -1,0 +1,47 @@
+.navigation-section{
+    margin: 0;
+    padding: 0;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 10vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.navigation{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    position: fixed;
+    width: 100%;
+    background-color: white;
+    z-index: 200;
+    
+}
+.header{
+    margin-top: 15rem;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.links{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.link{
+    margin-left: 2rem;
+    cursor: pointer;
+    font-size: 16px;
+}
+.link a{
+    color: black;
+    text-decoration: none;
+    
+}
+.get-pass{
+    border: 5px solid gold;
+    padding: 1px;
+    border-radius: 10px;
+}

@@ -1,0 +1,12 @@
+.slider-section{
+    margin-left: 3rem;
+    margin-right: 3rem;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.slider-section div img{
+    max-width: 70%;
+    max-height: 500px;
+}

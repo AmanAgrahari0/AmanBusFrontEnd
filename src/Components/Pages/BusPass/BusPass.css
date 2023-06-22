@@ -1,0 +1,22 @@
+.buy-pass-section{
+    margin-top: 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: column;
+}
+
+.buy-pass{
+    padding: 3rem;
+}
+
+.bus-form{
+    border: 1px solid black;
+    padding: 4rem;
+}
+input{
+    border: 1px solid black;
+    margin-top: 1rem;
+    height: 30px;
+    width: 80%;
+}
