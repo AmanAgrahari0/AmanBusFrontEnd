@@ -16,7 +16,7 @@ function Search() {
 
     const getSearchResult =async (e) => {
         e.preventDefault();
-        const response = fetch(`http://localhost:3500/api/customer/getBusesByDate`,{
+        const response = fetch(`https://aman-6rnm.onrender.com/api/customer/getBusesByDate`,{
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'

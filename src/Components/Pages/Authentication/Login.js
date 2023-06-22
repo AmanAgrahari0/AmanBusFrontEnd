@@ -20,7 +20,7 @@ function Login() {
 
     const userLogin = (e)=>{
         e.preventDefault();
-        axios.post(`http://localhost:3500/api/customer/login`, userData)
+        axios.post(`https://aman-6rnm.onrender.com/api/customer/login`, userData)
         .then((res)=>{
             alert(res.data.message);
             localStorage.setItem('customer', JSON.stringify(res.data.result))

@@ -21,7 +21,7 @@ function Signup() {
 
     const registerUser = (e)=>{
         e.preventDefault();
-        axios.post(`http://localhost:3500/api/customer/signup`, userData)
+        axios.post(`https://aman-6rnm.onrender.com/api/customer/signup`, userData)
         .then((res)=>{
             alert(res.data.message);
             window.location.reload();
