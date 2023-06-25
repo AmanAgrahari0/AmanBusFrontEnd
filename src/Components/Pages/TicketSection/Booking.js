@@ -1,54 +1,63 @@
+import axios from 'axios';
+import './TicketSection.css'
 import React, { useEffect, useState } from 'react';
+import { useNavigate } from 'react-router-dom';
+import StripeCheckout from 'react-stripe-checkout';
+const passengerAuth = localStorage.getItem('passenger');
+const passengerResult = JSON.parse(passengerAuth);
 
+const customerAuth = localStorage.getItem('customer')
+const customerResult = JSON.parse(customerAuth)
+
+const busAuth = localStorage.getItem('busData')
+const BusResult = JSON.parse(busAuth);
 const Booking = () => {
-    const ProductDisplay = () => (
-        <section>
-            <div className="product">
-                <img
-                    src="https://i.imgur.com/EHyR2nP.png"
-                    alt="The cover of Stubborn Attachments"
-                />
-                <div className="description">
-                    <h3>Stubborn Attachments</h3>
-                    <h5>$20.00</h5>
-                </div>
-            </div>
-            <form action="/create-checkout-session" method="POST">
-                <button type="submit">
-                    Checkout
-                </button>
-            </form>
-        </section>
-    );
-
-    const Message = ({ message }) => (
-        <section>
-          <p>{message}</p>
-        </section>
-      );
-
-      const [message, setMessage] = useState("");
-
-      useEffect(() => {
-        // Check to see if this is a redirect back from Checkout
-        const query = new URLSearchParams(window.location.search);
-    
-        if (query.get("success")) {
-          setMessage("Order placed! You will receive an email confirmation.");
+  const navigate = useNavigate();
+  const payNow = async token => {
+    try {
+      const response = await axios.post({
+        url: 'http://localhost:3500/api/customer/payment',
+        method: 'post',
+        data: {
+          amount: BusResult.price,
+          token,
         }
-    
-        if (query.get("canceled")) {
-          setMessage(
-            "Order canceled -- continue to shop around and checkout when you're ready."
-          );
-        }
-      }, []);
-    
-      return message ? (
-        <Message message={message} />
-      ) : (
-        <ProductDisplay />
-      );
+      });
+      if (response.status === 200) {
+        console.log("Payment Successful")
+        navigate('/ticket-history')
+      }
+    } catch (error) {
+      console.log(error)
+    }
+
+
+  }
+  return (
+    <div className='booking-section'>
+      <div className="booking-form">
+        <div className="cont-booking">
+          <div className="booking-info">
+            <h2>Complete the Payment</h2>
+          </div>
+          <h3>Product: Bus Ticket</h3>
+          <h3>Price: {BusResult.price}</h3>
+        </div>
+      </div>
+      <StripeCheckout
+        stripeKey="pk_live_51NJcubSIT3Y2fD3ys0nN3RTicD1SV64xdy2JPb2rCbZ4hXBlU08cuvsotwZlWox20TbfLaOwCnfDcN8hedE4BaZ800WoZQ6ge8"
+        label="Pay Now"
+        name="Bus Booking"
+        currency='INR'
+        billingAddress
+        shippingAddress
+        amount={BusResult.price * 100}
+        description={`Your total is ₹ ${BusResult.price}`}
+        token={payNow}
+      />
+    </div>
+
+  )
 };
 
 export default Booking;

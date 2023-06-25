@@ -47,7 +47,7 @@ function Purchase() {
       .then((res) => res.json())
       .then((data) => {
         console.log(data);
-        navigate('/ticket-history');
+        navigate('/bookings');
       })
       .catch((error) => {
         console.log(error);
