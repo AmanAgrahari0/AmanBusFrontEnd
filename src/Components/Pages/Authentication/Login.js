@@ -26,6 +26,10 @@ function Login() {
             localStorage.setItem('customer', JSON.stringify(res.data.result))
             navigate('/')
         })
+        .catch((err)=>{
+            console.log(err)
+        }
+        )
     }
 
     return (
