@@ -11,7 +11,7 @@ function TicketHistory() {
     const [ticketData, setTicketData] = useState([])
     const getTicketDetails = (e) => {
         // e.preventDefault();
-        axios.get(`http://localhost:3500/api/tickets/${customerResult.phone}`)
+        axios.get(`https://aman-bus.onrender.com/api/tickets/${customerResult.phone}`)
             .then((res) => {
                 console.log(res.data.result)
                 setTicketData(res.data.result)

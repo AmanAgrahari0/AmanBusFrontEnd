@@ -29,7 +29,7 @@ function Purchase() {
 
   const PassengerDetails = (e) => {
     e.preventDefault();
-    fetch(`http://localhost:3500/api/customer/add-passenger-details`, {
+    fetch(`https://aman-bus.onrender.com/api/customer/add-passenger-details`, {
       method: 'POST',
       headers: {
         'Content-type': 'application/json'

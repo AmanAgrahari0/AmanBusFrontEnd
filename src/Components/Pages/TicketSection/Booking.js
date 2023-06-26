@@ -16,7 +16,7 @@ const Booking = () => {
   const payNow = async token => {
     try {
       const response = await axios.post({
-        url: 'http://localhost:3500/api/customer/payment',
+        url: 'https://aman-bus.onrender.com/api/customer/payment',
         method: 'post',
         data: {
           amount: BusResult.price,
