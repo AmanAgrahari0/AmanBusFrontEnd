@@ -12,6 +12,9 @@ import Footer from './Components/Pages/HomePage/Footer/Footer';
 import Purchase from './Components/Pages/TicketSection/Purchase';
 import TicketHistory from './Components/Pages/TicketSection/TicketHistory';
 import Booking from './Components/Pages/TicketSection/Booking';
+import Admin from './Components/Pages/HomePage/Admin/Admin';
+import AddBus from './Components/Pages/HomePage/Admin/AddBus';
+import ViewBus from './Components/Pages/HomePage/Admin/ViewBus';
 
 function App() {
   return (
@@ -29,6 +32,10 @@ function App() {
           <Route exact path='/purchase-ticket' element={<Purchase/>}/>
           <Route exact path='/bookings' element={<Booking/>}/>
           <Route exact path='/ticket-history' element={<TicketHistory/>}/>
+          <Route exact path='/admin@1234asdfew' element={<Admin/>}/>
+          <Route exact path='/admin-addbus' element={<AddBus/>}/>
+          <Route exact path='/admin-viewbus' element={<ViewBus/>}/>
+
         </Routes>
       </Router>
       <Footer/>
